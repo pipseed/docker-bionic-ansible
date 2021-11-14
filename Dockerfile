@@ -41,6 +41,7 @@ RUN locale-gen en_GB.UTF-8
 
 # Install Ansible via Pip.
 RUN pip3 install cryptography==3.1
+RUN pip3 install docker
 RUN pip3 install $pip_packages
 
 COPY initctl_faker .
