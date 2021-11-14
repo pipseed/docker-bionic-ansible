@@ -7,8 +7,8 @@ LABEL version="v1.0"
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Fix for https://github.com/pypa/pip/issues/10219
-ARG LANG="en_US.UTF-8"
-ARG LC_ALL="en_US.UTF-8"
+ARG LANG="en_GB.UTF-8"
+ARG LC_ALL="en_GB.UTF-8"
 
 ENV pip_packages "ansible"
 
@@ -37,10 +37,10 @@ RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 RUN pip3 install --upgrade pip
 
 # Fix potential UTF-8 errors with ansible-test.
-RUN locale-gen en_US.UTF-8
+RUN locale-gen en_GB.UTF-8
 
 # Install Ansible via Pip.
-RUN pip3 install cryptography==2.8
+RUN pip3 install cryptography==3.1
 RUN pip3 install $pip_packages
 
 COPY initctl_faker .
