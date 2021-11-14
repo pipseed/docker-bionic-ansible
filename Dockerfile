@@ -10,7 +10,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ARG LANG="en_US.UTF-8"
 ARG LC_ALL="en_US.UTF-8"
 
-ENV pip_packages "ansible"
+ENV pip_packages "ansible, cryptography==2.8"
 
 # Install dependencies.
 RUN apt-get update \
