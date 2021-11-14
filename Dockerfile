@@ -37,7 +37,7 @@ RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 RUN pip3 install --upgrade pip
 
 # Fix potential UTF-8 errors with ansible-test.
-RUN locale-gen en_GB.UTF-8
+RUN locale-gen en_US.UTF-8
 
 # Install Ansible via Pip.
 RUN pip3 install $pip_packages
