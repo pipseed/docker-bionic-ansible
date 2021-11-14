@@ -10,7 +10,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ARG LANG="en_US.UTF-8"
 ARG LC_ALL="en_US.UTF-8"
 
-ENV pip_packages "ansible, cryptography==2.8"
+ENV pip_packages "ansible"
 
 # Install dependencies.
 RUN apt-get update \
@@ -40,6 +40,7 @@ RUN pip3 install --upgrade pip
 RUN locale-gen en_US.UTF-8
 
 # Install Ansible via Pip.
+RUN pip3 install cryptography==2.8
 RUN pip3 install $pip_packages
 
 COPY initctl_faker .
