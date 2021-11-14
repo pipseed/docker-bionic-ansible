@@ -4,8 +4,6 @@ FROM ubuntu:18.04
 LABEL maintainer="pipseed@gmail.com"
 LABEL version="v1.0"
 
-RUN sed -i -r '/^deb/s/\w+\.ubuntu\.com/dev-kvm-03.ams1.info\/patching\/current\/mirror\/archive.ubuntu.com/' /etc/apt/sources.list
-
 ARG DEBIAN_FRONTEND=noninteractive
 
 ENV pip_packages "ansible"

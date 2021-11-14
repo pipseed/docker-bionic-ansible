@@ -21,4 +21,4 @@ jobs:
         run: |
           docker buildx build --push \
             --tag pipseed/docker-home-molecule:latest \
-            --platform linux/amd64,linux/arm 20.04/.
+            --platform linux/amd64,linux/arm .
