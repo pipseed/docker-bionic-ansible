@@ -19,7 +19,6 @@ RUN apt-get update \
        libssl-dev \
        libyaml-dev \
        python3-dev \
-       python3 \
        python3-setuptools \
        python3-pip \
        python3-yaml \
