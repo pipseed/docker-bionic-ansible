@@ -33,6 +33,9 @@ RUN apt-get update \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man
 RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 
+# Upgrade all packages
+RUN apt update && apt upgrade -y
+
 # Upgrade pip to latest version.
 RUN pip3 install --upgrade pip
 
